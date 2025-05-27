@@ -1,6 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![image info](https://bundui-images.netlify.app/templates/waitly/02.png)
 
-## Getting Started
+## Download
 
 First, run the development server:
 
