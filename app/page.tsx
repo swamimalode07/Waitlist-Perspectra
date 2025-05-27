@@ -3,40 +3,10 @@
 import { Toaster } from "@/components/ui/sonner";
 import { WaitlistSignup } from "./components/waitlist-signup";
 
-const backgroundStyle = `
-  .bg-pattern {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-      linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
-    background-size: 20px 20px;
-    pointer-events: none;
-    z-index: 1;
-  }
-
-  .content {
-    position: relative;
-    z-index: 2;
-  }
-`;
-
 export default function Page() {
   return (
-    <main
-      className="min-h-screen flex items-center justify-center"
-      style={{
-        background: "radial-gradient(circle, rgb(30 32 40), rgb(0, 0, 0))",
-      }}
-    >
-      <style jsx global>
-        {backgroundStyle}
-      </style>
-      <div className="bg-pattern"></div>
-      <div className="content w-full">
+    <main className="min-h-screen flex items-center justify-center bg-radial from-white dark:from-gray-700 to-gray-300 dark:to-gray-900">
+      <div className="content relative z-10 w-full">
         <WaitlistSignup />
       </div>
       <Toaster
