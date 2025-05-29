@@ -1,13 +1,9 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { XIcon } from "@/components/icons/x-icon";
-import { DiscordIcon } from "@/components/icons/discord-icon";
-import { FacebookIcon } from "@/components/icons/facebook-icon";
-import { LinkedInIcon } from "@/components/icons/linkedin-icon";
+
 import { WaitlistForm } from "./waitlist-form";
-import { InstagramIcon } from "@/components/icons/instagram-icon";
-import { SocialIcon } from "@/components/social-icon";
+
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { supabase } from '@/lib/supabaseClient';
 
