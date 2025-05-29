@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
   <div style="max-width: 500px; margin: 0 auto; background: #1f1937; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);">
     
     <!-- Hero Image -->
-    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&h=200&fit=crop" alt="AI Perspectives" style="width: 100%; height: 200px; object-fit: cover; display: block;" />
+    <img src="https://github.com/swamimalode07/Waitlist-Perspectra/blob/main/public/banner.png?raw=true" alt="AI Perspectives" style="width: 100%; height: 200px; object-fit: cover; display: block;" />
     
     <!-- Main Content -->
     <div style="padding: 48px 40px; text-align: center;">

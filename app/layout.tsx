@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Waitlist Next.js Template",
+  title: "Perspectra",
   description:
     "A simple and useful waitlist Next.js template. Free and open source.",
 };
