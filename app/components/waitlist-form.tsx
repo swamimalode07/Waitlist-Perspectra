@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
-import { supabase } from "@/lib/supabaseClient"; // Adjust path if needed
 
 export function WaitlistForm() {
   const [isPending, setIsPending] = useState(false);
@@ -15,15 +14,20 @@ export function WaitlistForm() {
     e.preventDefault();
     setIsPending(true);
 
-    const { error } = await supabase.from("waitlist").insert([{ email }]);
+    const response = await fetch("/api/waitlist", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+
     setIsPending(false);
 
-    if (error) {
-      console.error(error);
-      toast.error("Could not join waitlist. Email might already be registered.");
+    if (!response.ok) {
+      const data = await response.json();
+      toast.error(data.error || "Could not join waitlist.");
     } else {
       toast.success("Thank you for signing up!");
-      setEmail(""); // Clear the input field
+      setEmail("");
     }
   };
 
