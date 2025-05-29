@@ -5,17 +5,30 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { supabase } from "@/lib/supabaseClient"; // Adjust path if needed
 
 export function WaitlistForm() {
-  const [isPending] = useState(false);
+  const [isPending, setIsPending] = useState(false);
   const [email, setEmail] = useState("");
 
-  const handleSubmit = async () => {
-    toast.success("Thank you for signing up!");
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsPending(true);
+
+    const { error } = await supabase.from("waitlist").insert([{ email }]);
+    setIsPending(false);
+
+    if (error) {
+      console.error(error);
+      toast.error("Could not join waitlist. Email might already be registered.");
+    } else {
+      toast.success("Thank you for signing up!");
+      setEmail(""); // Clear the input field
+    }
   };
 
   return (
-    <form action={handleSubmit} className="w-full space-y-4 mb-8">
+    <form onSubmit={handleSubmit} className="w-full space-y-4 mb-8">
       <div className="flex overflow-hidden rounded-xl bg-white/5 p-1 ring-1 ring-black/10 dark:ring-white/20 focus-within:ring-2 focus-within:ring-blue-500!">
         <Input
           id="email"
