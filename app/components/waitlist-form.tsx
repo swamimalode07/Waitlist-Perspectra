@@ -33,7 +33,7 @@ export function WaitlistForm() {
 
   return (
    <form onSubmit={handleSubmit} className="w-full max-w-2xl space-y-4 mb-8 mt-4 mx-auto">
- <div className="flex overflow-hidden rounded-xl bg-gradient-to-t from-gray-900/80 to-gray-500 p-1 sm:p-2 ring-1 ring-black/10 dark:ring-white/20 focus-within:ring-2 focus-within:ring-blue-500">
+ <div className="flex overflow-hidden rounded-xl bg-gradient-to-t from-gray-900/80 to-gray-500 p-1 py-2 sm:p-2 ring-1 ring-black/10 dark:ring-white/20 focus-within:ring-2 focus-within:ring-blue-500">
     <Input
       id="email"
       name="email"
@@ -43,7 +43,7 @@ export function WaitlistForm() {
       value={email}
       onChange={(e) => setEmail(e.target.value)}
       aria-describedby="email-error"
-      className="w-full border-0 !bg-white text-black px-3 sm:px-4 py-4 sm:py-6 placeholder:text-gray-500 focus:ring-0 focus:outline-none text-sm sm:text-base"
+      className="w-full border-0 !bg-white text-black px-3 sm:px-4 py-4 sm:py-6  placeholder:text-gray-500 focus:ring-0 focus:outline-none text-sm sm:text-base"
     />
     <Button 
       type="submit" 
