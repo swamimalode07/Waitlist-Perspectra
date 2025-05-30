@@ -62,7 +62,7 @@ function WaitlistCounter() {
   return (
     <div className="flex flex-col items-center">
       <p className="text-foreground font-semibold">
-        {userCount !== null ? `${userCount.toLocaleString()}+ people on the waitlist` : 'Loading waitlist...'}
+        {userCount !== null ? `${userCount.toLocaleString()}+ people already joined` : 'Loading waitlist...'}
       </p>
       {error && (
         <p className="text-red-500 text-xs mt-1 max-w-xs text-center">
@@ -100,16 +100,16 @@ export function WaitlistSignup() {
           <div className="flex items-center justify-center mt-8">
             <div className="flex -space-x-3 mr-4">
               <Avatar className="size-10">
-                <AvatarImage src="https://bundui-images.netlify.app/avatars/01.png" />
+                <AvatarImage src="/pfp/image.png" />
               </Avatar>
               <Avatar className="size-10">
-                <AvatarImage src="https://bundui-images.netlify.app/avatars/02.png" />
+                <AvatarImage src="/pfp/one.png" />
               </Avatar>
               <Avatar className="size-10">
-                <AvatarImage src="https://bundui-images.netlify.app/avatars/03.png" />
+                <AvatarImage src="/pfp/ani.png" />
               </Avatar>
               <Avatar className="size-10">
-                <AvatarImage src="https://bundui-images.netlify.app/avatars/04.png" />
+                <AvatarImage src="/pfp/nizzy.png" />
               </Avatar>
             </div>
             <WaitlistCounter />

@@ -25,23 +25,23 @@ export const AuroraBackground = ({
         <div
           className="absolute inset-0 overflow-hidden"
           style={
-            {
-              "--aurora":
-                "repeating-linear-gradient(100deg,#a855f7 10%,#d8b4fe 15%,#c084fc 20%,#f3e8ff 25%,#9333ea 30%)",
-              "--dark-gradient":
-                "repeating-linear-gradient(100deg,#110321 0%,#1a0538 7%,transparent 10%,transparent 12%,#200545 16%)",
-              "--white-gradient":
-                "repeating-linear-gradient(100deg,#f5f3ff 0%,#f5f3ff 7%,transparent 10%,transparent 12%,#f5f3ff 16%)",
-              "--blue-300": "#d8b4fe", // purple-300
-              "--blue-400": "#c084fc", // purple-400
-              "--blue-500": "#a855f7", // purple-500
-              "--indigo-300": "#f3e8ff", // purple-100
-              "--violet-200": "#581c87", // purple-800
-              "--black": "#110321",     // even darker than purple-950
-              "--white": "#f5f3ff",     // purple-50
-              "--transparent": "transparent",
-            } as React.CSSProperties
-          }
+  {
+    "--aurora":
+      "repeating-linear-gradient(100deg,#a855f7 10%,#d8b4fe 15%,#c084fc 20%,#f3e8ff 25%,#9333ea 30%)",
+    "--dark-gradient":
+      "repeating-linear-gradient(100deg,#110321 0%,#1a0538 7%,transparent 10%,transparent 12%,#200545 16%)",
+    "--white-gradient":
+      "repeating-linear-gradient(100deg,#f5f3ff 0%,#f5f3ff 7%,transparent 10%,transparent 12%,#f5f3ff 16%)",
+    "--blue-300": "#d8b4fe", // purple-300
+    "--blue-400": "#c084fc", // purple-400
+    "--blue-500": "#a855f7", // purple-500
+    "--indigo-300": "#f3e8ff", // purple-100
+    "--violet-200": "#581c87", // purple-800
+    "--black": "#110321",     // dark purple
+    "--white": "#f5f3ff",     // light purple
+    "--transparent": "transparent",
+  } as React.CSSProperties
+}
         >
           <div
             //   I'm sorry but this is what peak developer performance looks like // trigger warning

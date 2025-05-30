@@ -92,7 +92,7 @@ const Describe: React.FC<DescribeProps> = ({
                 How It Works
               </h3>
               <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-base px-4">
-                Simple steps to get comprehensive AI insights
+                Simple steps to make better decisions
               </p>
             </div>
             
